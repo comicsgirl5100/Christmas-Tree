@@ -7,16 +7,16 @@ import math
 while(True):
     #ask user for info
     print("Enter tree width: ")
-    treeWidth = float(input())
+    treeWidth = int(input())
 
     print("Enter tree height (Must be at least half the width):")
-    treeHeight = float(input())
+    treeHeight = int(input())
 
     print("Enter stump height: ")
-    stumpHeight = float(input())
+    stumpHeight = int(input())
 
     print("Enter stump width: ")
-    stumpWidth = float(input())
+    stumpWidth = int(input())
 
     if(
         treeHeight > stumpHeight and
@@ -41,20 +41,20 @@ def astrics(treeWidth):
 if(treeWidth%2 == 0):
     treeWidth += 1
 
-for i in range(1,int(treeHeight-1)):
+for i in range(1, (treeHeight-1)):
     print(i)
 
 print(">>>>>>>>>>")
 
 #top of tree
-for i in range(int(treeWidth/2)):
+for i in range(treeWidth/2):
     print(" ", end='')
 print("*")
 #values for middle of tree
 treeRatio = float(treeHeight)/treeWidth
 
 #middle of tree
-for i in range(1,int(treeHeight-1)):
+for i in range(1,(treeHeight-1)):
     #this determines the number of astrics that the tree row needs
     numAstrics = ((i+1)*(treeRatio))
     numAstrics = int(math.floor(numAstrics))
@@ -63,13 +63,13 @@ for i in range(1,int(treeHeight-1)):
         numAstrics += 1
         
     #this determines the spaces that the row needs to line up
-    spaces = (((int(treeWidth)) - numAstrics)/2)
+    spaces = (((treeWidth) - numAstrics)/2)
     for i in range(spaces):
         print(" ", end='')
     print("*"*numAstrics)
 
 #bottom of tree
-astrics(int(treeWidth))
+astrics(treeWidth)
 
 ###code that currently works to print tree but not correct width.
 ###prints tree part     
