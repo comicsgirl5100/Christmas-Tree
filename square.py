@@ -37,11 +37,14 @@ def printAstrics(treeWidth):
         print("*", end='')
     print()
 
+
 print(">>>>>>>>>>")
 print()
 
+
 treeRatio = float(treeHeight)/treeWidth
 #middle of tree
+
 for i in range(0,treeHeight):
     #this determines the number of astrics that the tree row needs
     numAstrics = i*treeRatio
@@ -54,3 +57,4 @@ for i in range(0,treeHeight):
     spaces = int(math.floor((treeWidth - numAstrics)/2))
     print(" "*spaces,end="")
     print("*"*numAstrics)
+
