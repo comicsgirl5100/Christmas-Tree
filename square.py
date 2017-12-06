@@ -50,7 +50,7 @@ for i in range(int(treeWidth/2)):
     print(" ", end='')
 print("*")
 #values for middle of tree
-treeRatio = double(treeHeight)/treeWidth
+treeRatio = float(treeHeight)/treeWidth
 
 #middle of tree
 for i in range(1,int(treeHeight-1)):
