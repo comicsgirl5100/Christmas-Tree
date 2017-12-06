@@ -42,7 +42,7 @@ print(">>>>>>>>>>")
 print()
 
 
-treeRatio = float(treeHeight)/treeWidth
+treeRatio = treeWidth/float(treeHeight)
 #middle of tree
 
 for i in range(0,treeHeight):
