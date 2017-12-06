@@ -1,3 +1,4 @@
+
 #imports
 from __future__ import print_function
 import math
@@ -86,3 +87,4 @@ astrics(int(treeWidth))
 ##    for x in range(stumpTab):
 ##        print(" ", end='')
 ##    print("*"*(int(math.floor(stumpWidth/2))) + "*" + "*"*(int(math.floor(stumpWidth/2))))
+
