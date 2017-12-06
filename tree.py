@@ -52,6 +52,5 @@ for i in range(0,treeHeight):
         
     #this determines the spaces that the row needs to line up
     spaces = int(math.floor((treeWidth - numAstrics)/2))
-    for i in range(spaces):
-        print(" ", end='')
+    print(" "*spaces,end="")
     print("*"*numAstrics)
