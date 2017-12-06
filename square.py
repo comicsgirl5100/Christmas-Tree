@@ -37,9 +37,7 @@ def astrics(treeWidth):
     print()
         
 #to make center line
-if(treeWidth%2 == 1):
-    pass
-else:
+if(treeWidth%2 == 0):
     treeWidth += 1
 
 for i in range(1,int(treeHeight-1)):
@@ -52,19 +50,17 @@ for i in range(int(treeWidth/2)):
     print(" ", end='')
 print("*")
 #values for middle of tree
-treeRatio = (math.ceil((treeHeight)/(treeWidth)))
-treeRatio = int(treeRatio)
+treeRatio = double(treeHeight)/treeWidth
 
 #middle of tree
 for i in range(1,int(treeHeight-1)):
     #this determines the number of astrics that the tree row needs
     numAstrics = ((i+1)*(treeRatio))
-    numAstrics = int(numAstrics)
+    numAstrics = int(math.floor(numAstrics))
     #this maked it so the tree lines up in the middle
-    if (numAstrics%2 == 1):
-        pass
-    else:
+    if (numAstrics%2 == 0):
         numAstrics += 1
+        
     #this determines the spaces that the row needs to line up
     spaces = (((int(treeWidth)) - numAstrics)/2)
     for i in range(spaces):
