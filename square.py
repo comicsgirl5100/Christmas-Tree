@@ -32,59 +32,29 @@ while(True):
         print("Bad input, try again")
 
 
-def astrics(treeWidth):
+def printAstrics(treeWidth):
     for i in range(treeWidth):
         print("*", end='')
     print()
-        
-#to make center line
-if(treeWidth%2 == 0):
-    treeWidth += 1
 
-for i in range(1, (treeHeight-1)):
-    print(i)
 
 print(">>>>>>>>>>")
+print()
 
-#top of tree
-for i in range(treeWidth/2):
-    print(" ", end='')
-print("*")
-#values for middle of tree
-treeRatio = float(treeHeight)/treeWidth
 
+treeRatio = treeWidth/float(treeHeight)
 #middle of tree
-for i in range(1,(treeHeight-1)):
+
+for i in range(0,treeHeight):
     #this determines the number of astrics that the tree row needs
-    numAstrics = ((i+1)*(treeRatio))
+    numAstrics = i*treeRatio
     numAstrics = int(math.floor(numAstrics))
     #this maked it so the tree lines up in the middle
     if (numAstrics%2 == 0):
         numAstrics += 1
         
     #this determines the spaces that the row needs to line up
-    spaces = (((treeWidth) - numAstrics)/2)
-    for i in range(spaces):
-        print(" ", end='')
+    spaces = int(math.floor((treeWidth - numAstrics)/2))
+    print(" "*spaces,end="")
     print("*"*numAstrics)
-
-#bottom of tree
-astrics(treeWidth)
-
-###code that currently works to print tree but not correct width.
-###prints tree part     
-##for i in range(treeHeight):
-##    for x in range((treeWidth)*(treeHeight-i-1)):
-##        print(" ", end='')
-##
-##    print(("*"*(int(math.floor(treeWidth/2))) + "*" + "*"*(int(math.floor(treeWidth/2))))*(2*i+1))
-##
-##
-##stumpTab = ((treeWidth)*(treeHeight-1) + (int(math.floor(treeWidth/2))) - (int(math.floor(stumpWidth/2))))
-##
-###prints stump`
-##for i in range(stumpHeight):
-##    for x in range(stumpTab):
-##        print(" ", end='')
-##    print("*"*(int(math.floor(stumpWidth/2))) + "*" + "*"*(int(math.floor(stumpWidth/2))))
 
